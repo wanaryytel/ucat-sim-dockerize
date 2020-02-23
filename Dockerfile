@@ -21,7 +21,7 @@ RUN echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 RUN sudo rosdep fix-permissions
 
 USER root
-RUN wget -O /etc/ros/rosdep/base.yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
+COPY base.yaml /etc/ros/rosdep/base.yaml
 
 RUN echo "yaml file:///etc/ros/rosdep/base.yaml\n$(cat /etc/ros/rosdep/sources.list.d/20-default.list)" > /etc/ros/rosdep/sources.list.d/20-default.list
 USER developer
