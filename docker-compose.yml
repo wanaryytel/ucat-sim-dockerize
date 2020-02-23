@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+
+  ros:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #image: postgres:11
+    # Comment in the following lines to connect to your Dockerized instance of Postgres from your host machine.
+    # Change the host port (before colon) if you have a local instance of Postgres running on that port.
+    # ports:
+    #     - "5432:5432"
+    # PS "make psql" is also a thing
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+#      - .data/catkin_ws:/opt/catkin_ws
+#      - .data/ros_catkin_ws:/opt/ros_catkin_ws
+    #  - .:/opt/kool
+    environment:
+      - DISPLAY=$DISPLAY
+    #  POSTGRES_USER: kool
+    #  POSTGRES_PASSWORD: kool
+    #working_dir: /opt/kool
+    stdin_open: true
+    tty: true

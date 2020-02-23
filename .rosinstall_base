@@ -1,0 +1,1 @@
+- git: {local-name: src/underwater_simulation, uri: 'https://github.com/uji-ros-pkg/underwater_simulation.git', version: melodic-devel}

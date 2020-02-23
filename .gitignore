@@ -1,0 +1,7 @@
+.data/
+.idea/
+ignore/
+Dockerfile-*
+
+arrows_hls.zip
+ucat_simulator.zip
